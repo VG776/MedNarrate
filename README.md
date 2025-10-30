@@ -1,5 +1,8 @@
 # MedNarrate 🩺
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+
 MedNarrate is a full-stack web application that simplifies medical report interpretation, making healthcare information more accessible and understandable for everyone. It uses AI to analyze medical reports and provide clear, human-friendly explanations.
 
 ## Features 🌟
