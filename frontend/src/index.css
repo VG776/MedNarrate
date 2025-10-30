@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 206 100% 97%;
+    --foreground: 210 30% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 25%;
+
+    --primary: 204 62% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 204 82% 76%;
+
+    --secondary: 180 33% 82%;
+    --secondary-foreground: 210 30% 25%;
+
+    --muted: 206 50% 94%;
+    --muted-foreground: 210 20% 50%;
+
+    --accent: 180 40% 88%;
+    --accent-foreground: 210 30% 25%;
+
+    --warm-blue: 204 62% 56%;
+    --soft-teal: 180 33% 82%;
+    --gentle-grey: 210 25% 92%;
+    --deep-blue: 210 45% 35%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 204 62% 56%;
+
+    --radius: 1rem;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(204 62% 56%), hsl(204 82% 76%));
+    --gradient-soft: linear-gradient(180deg, hsl(206 100% 97%), hsl(180 60% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(206 100% 97%), hsl(180 60% 95%), hsl(206 100% 97%));
+    
+    --shadow-soft: 0 4px 20px -4px hsl(204 62% 56% / 0.15);
+    --shadow-hover: 0 8px 30px -6px hsl(204 62% 56% / 0.25);
+    --shadow-glow: 0 0 30px hsl(204 82% 76% / 0.4);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 40% 12%;
+    --foreground: 206 100% 97%;
+
+    --card: 210 35% 16%;
+    --card-foreground: 206 100% 97%;
+
+    --popover: 210 35% 16%;
+    --popover-foreground: 206 100% 97%;
+
+    --primary: 204 82% 76%;
+    --primary-foreground: 210 40% 12%;
+    --primary-glow: 204 62% 56%;
+
+    --secondary: 180 25% 30%;
+    --secondary-foreground: 206 100% 97%;
+
+    --muted: 210 30% 22%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 180 30% 35%;
+    --accent-foreground: 206 100% 97%;
+
+    --warm-blue: 204 82% 76%;
+    --soft-teal: 180 40% 50%;
+    --gentle-grey: 210 25% 25%;
+    --deep-blue: 204 62% 56%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --ring: 204 82% 76%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-soft {
+    background: var(--gradient-soft);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+  
+  .animate-gentle-wave {
+    animation: gentleWave 20s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentleWave {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-10px, -10px) scale(1.02);
+  }
+  50% {
+    transform: translate(-5px, 5px) scale(1.01);
+  }
+  75% {
+    transform: translate(5px, -5px) scale(1.02);
+  }
+}

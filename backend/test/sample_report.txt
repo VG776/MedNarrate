@@ -1,0 +1,15 @@
+LABORATORY REPORT
+Date: 2025-10-25
+
+COMPLETE BLOOD COUNT (CBC)
+Hemoglobin: 13.5 g/dL (Normal range: 12-16)
+White Blood Cells: 7.2 x10^9/L (Normal range: 4.0-11.0)
+Red Blood Cells: 4.8 x10^12/L (Normal range: 4.2-5.8)
+
+LIPID PANEL
+Total Cholesterol: 185 mg/dL (Normal range: <200)
+HDL Cholesterol: 55 mg/dL (Normal range: >40)
+LDL Cholesterol: 110 mg/dL (Normal range: <130)
+
+GLUCOSE
+Fasting Blood Glucose: 92 mg/dL (Normal range: 70-100)
